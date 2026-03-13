@@ -10,3 +10,11 @@ func _process(delta: float) -> void:
 	$Ground.scroll_offset.x -= 50 * delta
 	$Trees.scroll_offset.x -= 100 * delta
 	pass
+
+
+func _on_start_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://game/game.tscn")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit(0)
