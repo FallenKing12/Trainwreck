@@ -1,35 +1,35 @@
-[gd_scene format=3 uid="uid://dg03widqact3g"]
+[gd_scene load_steps=5 format=3 uid="uid://dg03widqact3g"]
 
 [ext_resource type="Texture2D" uid="uid://crcmy6mtnb7qm" path="res://menu/background/bg1.png" id="1_6nwqt"]
 [ext_resource type="Script" uid="uid://b2owfil6webgc" path="res://menu/menu.gd" id="1_pbjm4"]
 [ext_resource type="Texture2D" uid="uid://v5fwgr5cwe8y" path="res://menu/background/bg2.png" id="2_pbjm4"]
 [ext_resource type="Texture2D" uid="uid://dtw3hdfbpwbeb" path="res://menu/background/bg3.png" id="3_svuvw"]
 
-[node name="menu" type="Node2D" unique_id=1151087477]
+[node name="menu" type="Node2D"]
 script = ExtResource("1_pbjm4")
 
-[node name="Sky" type="Parallax2D" parent="." unique_id=2099646483]
+[node name="Sky" type="Parallax2D" parent="."]
 repeat_size = Vector2(1152, 648)
 
-[node name="bg1" type="Sprite2D" parent="Sky" unique_id=309641966]
+[node name="bg1" type="Sprite2D" parent="Sky"]
 position = Vector2(576, 324)
 texture = ExtResource("1_6nwqt")
 
-[node name="Ground" type="Parallax2D" parent="." unique_id=1266830900]
+[node name="Ground" type="Parallax2D" parent="."]
 repeat_size = Vector2(1152, 0)
 
-[node name="bg2" type="Sprite2D" parent="Ground" unique_id=43440234]
+[node name="bg2" type="Sprite2D" parent="Ground"]
 position = Vector2(576, 324)
 texture = ExtResource("2_pbjm4")
 
-[node name="Trees" type="Parallax2D" parent="." unique_id=2144932155]
+[node name="Trees" type="Parallax2D" parent="."]
 repeat_size = Vector2(1152, 0)
 
-[node name="bg3" type="Sprite2D" parent="Trees" unique_id=75018703]
+[node name="bg3" type="Sprite2D" parent="Trees"]
 position = Vector2(576, 324)
 texture = ExtResource("3_svuvw")
 
-[node name="Start_button" type="Button" parent="." unique_id=361892946]
+[node name="Start_button" type="Button" parent="."]
 offset_left = 666.0
 offset_top = 166.0
 offset_right = 1136.0
@@ -37,7 +37,7 @@ offset_bottom = 251.0
 text = "Start new game
 "
 
-[node name="Quit_button" type="Button" parent="." unique_id=1886044069]
+[node name="Quit_button" type="Button" parent="."]
 offset_left = 664.0
 offset_top = 272.0
 offset_right = 1134.0
@@ -45,5 +45,12 @@ offset_bottom = 357.0
 text = "Quit
 "
 
+[node name="test_button" type="Button" parent="."]
+offset_left = 327.0
+offset_top = 159.0
+offset_right = 563.0
+offset_bottom = 244.0
+
 [connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="test_button" to="." method="_on_test_button_pressed"]
