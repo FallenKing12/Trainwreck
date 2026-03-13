@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjoigg1kruiks"]
+[gd_scene format=3 uid="uid://cjoigg1kruiks"]
 
-[ext_resource type="Texture2D" uid="uid://bhgjvm447tvwq" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
-[ext_resource type="Script" uid="uid://bocwexjby225n" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
-[ext_resource type="PackedScene" uid="uid://bisvjybu7awwd" path="res://player/player.tscn" id="2_3f77q"]
+[ext_resource type="Texture2D" uid="uid://pegmdhxtpkl7" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
+[ext_resource type="Script" uid="uid://behshsq5f55su" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
+[ext_resource type="PackedScene" uid="uid://bisvjybu7awwd" path="res://characters/player/player.tscn" id="2_3f77q"]
 
 [sub_resource type="Gradient" id="Gradient_ajqnh"]
 interpolation_mode = 1
@@ -17,23 +17,126 @@ frequency = 0.0078
 noise = SubResource("FastNoiseLite_or4qw")
 color_ramp = SubResource("Gradient_ajqnh")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tt8em"]
-resource_name = "tileset1"
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f77q"]
 texture = ExtResource("1_1hyqy")
+texture_region_size = Vector2i(320, 320)
 0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
 1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
 2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
 3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/top_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+0:3/0/terrains_peering_bit/right_side = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/left_side = 0
+0:4/0 = 0
+0:4/0/terrain_set = 0
+0:4/0/terrain = 1
 
 [sub_resource type="TileSet" id="TileSet_ybixb"]
-sources/0 = SubResource("TileSetAtlasSource_tt8em")
+tile_size = Vector2i(320, 320)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Water"
+terrain_set_0/terrain_0/color = Color(0, 0, 0, 1)
+terrain_set_0/terrain_1/name = "Dirt"
+terrain_set_0/terrain_1/color = Color(1, 1, 1, 1)
+sources/1 = SubResource("TileSetAtlasSource_3f77q")
 
-[node name="proc_gen_world" type="Node2D"]
+[node name="proc_gen_world" type="Node2D" unique_id=414488846]
 script = ExtResource("1_3f77q")
 noise_texture = SubResource("NoiseTexture2D_2jbus")
 
-[node name="Layer0" type="TileMapLayer" parent="."]
+[node name="Layer0" type="TileMapLayer" parent="." unique_id=198620756]
 use_parent_material = true
 tile_set = SubResource("TileSet_ybixb")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_3f77q")]
+[node name="CharacterBody2D" parent="." unique_id=931722736 instance=ExtResource("2_3f77q")]

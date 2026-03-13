@@ -137,7 +137,7 @@ sprite_frames = SubResource("SpriteFrames_rkbax")
 shape = SubResource("CircleShape2D_g1dw6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=308574644]
-zoom = Vector2(1.305, 1.305)
+zoom = Vector2(0.13, 0.13)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true

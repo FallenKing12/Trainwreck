@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var player_animation = $AnimatedSprite2D
 
 
-const speed = 300.0
+const speed = 3000.0
 
 
 func _ready() -> void:
