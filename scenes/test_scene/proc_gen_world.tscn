@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cjoigg1kruiks"]
+[gd_scene format=3 uid="uid://b6meoogajx1ue"]
 
-[ext_resource type="Texture2D" uid="uid://bhgjvm447tvwq" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
-[ext_resource type="Script" uid="uid://bocwexjby225n" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
+[ext_resource type="Texture2D" uid="uid://db0rh18yujm6o" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
+[ext_resource type="Script" uid="uid://b8217t8oexf2l" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
 [ext_resource type="PackedScene" uid="uid://bisvjybu7awwd" path="res://characters/player/player.tscn" id="2_3f77q"]
 
 [sub_resource type="Gradient" id="Gradient_ajqnh"]
@@ -132,12 +132,12 @@ terrain_set_0/terrain_1/name = "Dirt"
 terrain_set_0/terrain_1/color = Color(1, 1, 1, 1)
 sources/1 = SubResource("TileSetAtlasSource_3f77q")
 
-[node name="proc_gen_world" type="Node2D"]
+[node name="proc_gen_world" type="Node2D" unique_id=1974038713]
 script = ExtResource("1_3f77q")
 noise_texture = SubResource("NoiseTexture2D_2jbus")
 
-[node name="Layer0" type="TileMapLayer" parent="."]
+[node name="Layer0" type="TileMapLayer" parent="." unique_id=1610542613]
 use_parent_material = true
 tile_set = SubResource("TileSet_ybixb")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_3f77q")]
+[node name="player" parent="." unique_id=243388541 instance=ExtResource("2_3f77q")]

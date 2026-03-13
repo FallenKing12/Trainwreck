@@ -20,14 +20,24 @@ var terrain_set = 0
 
 @onready var tilemap: TileMapLayer = $Layer0
 
-var world_seed = RandomNumberGenerator.new()  # Создаем экземпляр
+var world_seed = RandomNumberGenerator.new()
+
+var developer_mode = true;
+
 
 func _ready():
 	noise = noise_texture.noise
 	world_seed.randomize()  # Случайный сид (по времени)
 	noise.set_seed(world_seed.randi())
 	generate_world()
-	
+
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_filedialog_delete"):
+		developer_mode = !developer_mode
+		if $player.has_method("update_deleloper_mode"):
+			$player.update_deleloper_mode(developer_mode)
+
 
 func generate_world():
 	var dirt_cells = []
