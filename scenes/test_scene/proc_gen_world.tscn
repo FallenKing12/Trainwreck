@@ -1,17 +1,18 @@
-[gd_scene format=3 uid="uid://cjoigg1kruiks"]
+[gd_scene load_steps=9 format=3 uid="uid://cjoigg1kruiks"]
 
-[ext_resource type="Texture2D" uid="uid://pegmdhxtpkl7" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
-[ext_resource type="Script" uid="uid://behshsq5f55su" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
+[ext_resource type="Texture2D" uid="uid://bhgjvm447tvwq" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
+[ext_resource type="Script" uid="uid://bocwexjby225n" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
 [ext_resource type="PackedScene" uid="uid://bisvjybu7awwd" path="res://characters/player/player.tscn" id="2_3f77q"]
 
 [sub_resource type="Gradient" id="Gradient_ajqnh"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.17991632, 0.34309626)
+offsets = PackedFloat32Array(0, 0.2, 0.3)
 colors = PackedColorArray(0, 0.77254903, 1, 1, 1, 0.7529412, 0, 1, 0, 0.40784314, 0, 1)
+metadata/_snap_enabled = true
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_or4qw"]
-noise_type = 0
-frequency = 0.0078
+noise_type = 5
+frequency = 0.0142
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2jbus"]
 noise = SubResource("FastNoiseLite_or4qw")
@@ -131,12 +132,12 @@ terrain_set_0/terrain_1/name = "Dirt"
 terrain_set_0/terrain_1/color = Color(1, 1, 1, 1)
 sources/1 = SubResource("TileSetAtlasSource_3f77q")
 
-[node name="proc_gen_world" type="Node2D" unique_id=414488846]
+[node name="proc_gen_world" type="Node2D"]
 script = ExtResource("1_3f77q")
 noise_texture = SubResource("NoiseTexture2D_2jbus")
 
-[node name="Layer0" type="TileMapLayer" parent="." unique_id=198620756]
+[node name="Layer0" type="TileMapLayer" parent="."]
 use_parent_material = true
 tile_set = SubResource("TileSet_ybixb")
 
-[node name="CharacterBody2D" parent="." unique_id=931722736 instance=ExtResource("2_3f77q")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_3f77q")]
