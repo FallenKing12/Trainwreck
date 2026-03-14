@@ -1,16 +1,21 @@
 extends Node2D
 
+@onready var cam = $Camera2D
+
+@onready var start_but = $Start_button
+@onready var quit_but = $Quit_button
+@onready var test_but = $test_button
 
 func _ready() -> void:
-	$Camera2D.global_position = Vector2(576.0, 0.0)
+	cam.global_position = Vector2(576.0, 0.0)
 	
-	$Start_button.modulate.a = 0.0
-	$Quit_button.modulate.a = 0.0
-	$test_button.modulate.a = 0.0
+	start_but.modulate.a = 0.0
+	quit_but.modulate.a = 0.0
+	test_but.modulate.a = 0.0
 	
-	$Start_button.disabled = true
-	$Quit_button.disabled = true
-	$test_button.disabled = true
+	start_but.disabled = true
+	quit_but.disabled = true
+	test_but.disabled = true
 
 func _process(delta: float) -> void:
 	$Sky.scroll_offset.x -= 100 * delta
@@ -21,25 +26,27 @@ func _process(delta: float) -> void:
 
 func intro(skipped: bool) -> void:
 	if skipped:
-		$Camera2D.global_position = Vector2(576.0, 324.0)
+		cam.global_position = Vector2(576.0, 324.0)
 		
-		$Start_button.modulate.a = 1.0
-		$Quit_button.modulate.a = 1.0
-		$test_button.modulate.a = 1.0
+		start_but.modulate.a = 1.0
+		quit_but.modulate.a = 1.0
+		test_but.modulate.a = 1.0
 		
-		$Start_button.disabled = false
-		$Quit_button.disabled = false
-		$test_button.disabled = false
+		start_but.disabled = false
+		quit_but.disabled = false
+		test_but.disabled = false
 	else:
 		var tween = create_tween()
-		tween.tween_property($Camera2D, "global_position", Vector2(576.0, 324.0), 5.0)
+		tween.tween_property(cam, "global_position", Vector2(576.0, 324.0), 5.0)
 		
-		$Start_button.disabled = false
-		tween.tween_property($Start_button, "modulate:a", 1, 1.0)
-		$Quit_button.disabled = false
-		tween.tween_property($Quit_button, "modulate:a", 1, 1.0)
-		$test_button.disabled = false
-		tween.tween_property($test_button, "modulate:a", 1, 1.0)
+		# когда будет поезд, сделать ещё сдвиг влево
+		
+		start_but.disabled = false
+		tween.tween_property(start_but, "modulate:a", 1, 1.0)
+		quit_but.disabled = false
+		tween.tween_property(quit_but, "modulate:a", 1, 1.0)
+		test_but.disabled = false
+		tween.tween_property(test_but, "modulate:a", 1, 1.0)
 
 
 func _on_start_button_pressed() -> void:

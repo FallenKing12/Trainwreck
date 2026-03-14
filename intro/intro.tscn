@@ -15,7 +15,7 @@ script = ExtResource("1_jkt4n")
 
 [node name="Intro" type="Sprite2D" parent="." unique_id=1709491960]
 top_level = true
-position = Vector2(576, 324)
+position = Vector2(576, 0)
 scale = Vector2(0.465, 0.465)
 texture = ExtResource("1_fpmxm")
 
@@ -29,6 +29,6 @@ text = "BIDLO Studios"
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1769640406]
-position = Vector2(576, 324)
+position = Vector2(576, 0)
 scale = Vector2(1.4014598, 0.77884614)
 texture = ExtResource("3_vjsr4")
