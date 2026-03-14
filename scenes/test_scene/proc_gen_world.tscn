@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6meoogajx1ue"]
+[gd_scene format=3 uid="uid://b6meoogajx1ue"]
 
-[ext_resource type="Texture2D" uid="uid://db0rh18yujm6o" path="res://assets/tilesets/tileset.png" id="1_1hyqy"]
-[ext_resource type="Script" uid="uid://b8217t8oexf2l" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
+[ext_resource type="Script" uid="uid://cb8rbipbxp4m8" path="res://scenes/test_scene/proc_gen_world.gd" id="1_3f77q"]
 [ext_resource type="PackedScene" uid="uid://bisvjybu7awwd" path="res://characters/player/player.tscn" id="2_3f77q"]
-[ext_resource type="Texture2D" uid="uid://eo2dms1a4ndd" path="res://assets/tilesets/tileset2.png" id="4_ajqnh"]
+[ext_resource type="Texture2D" uid="uid://dgglpfccpw2c1" path="res://assets/tilesets/tileset2.png" id="4_ajqnh"]
 
 [sub_resource type="Gradient" id="Gradient_ajqnh"]
 interpolation_mode = 1
@@ -18,139 +17,6 @@ frequency = 0.007
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2jbus"]
 noise = SubResource("FastNoiseLite_or4qw")
 color_ramp = SubResource("Gradient_ajqnh")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3f77q"]
-texture = ExtResource("1_1hyqy")
-texture_region_size = Vector2i(320, 320)
-0:0/0 = 0
-0:0/0/terrain_set = 0
-0:0/0/terrain = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.5692139, 65.90701, 70.614655, 0, 160, -43.93802, 160, 160, -48.64563, 160)
-0:0/0/terrains_peering_bit/right_side = 0
-0:0/0/terrains_peering_bit/bottom_right_corner = 0
-0:0/0/terrains_peering_bit/bottom_side = 0
-1:0/0 = 0
-1:0/0/terrain_set = 0
-1:0/0/terrain = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-160, -39.230347, -65.90701, -73.75308, 53.353302, -86.30679, 160, -43.93802, 160, 160, -160, 160)
-1:0/0/terrains_peering_bit/right_side = 0
-1:0/0/terrains_peering_bit/bottom_right_corner = 0
-1:0/0/terrains_peering_bit/bottom_side = 0
-1:0/0/terrains_peering_bit/bottom_left_corner = 0
-1:0/0/terrains_peering_bit/left_side = 0
-2:0/0 = 0
-2:0/0/terrain_set = 0
-2:0/0/terrain = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-65.90701, 1.5692139, 0, 70.614655, 43.93802, 160, -160, 160, -160, -48.64563)
-2:0/0/terrains_peering_bit/bottom_side = 0
-2:0/0/terrains_peering_bit/bottom_left_corner = 0
-2:0/0/terrains_peering_bit/left_side = 0
-3:0/0 = 0
-3:0/0/terrain_set = 0
-3:0/0/terrain = 0
-3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-84.149155, 160, -84.149155, -63.776207, -69.97667, -79.72025, 71.74823, -81.49181, 82.377594, -62.004646, 80.60602, 160)
-3:0/0/terrains_peering_bit/bottom_side = 0
-3:1/0 = 0
-3:1/0/terrain_set = 0
-3:1/0/terrain = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(82.5, 160, -80.5, 160, -80.5, -160, 81.5, -160)
-3:1/0/terrains_peering_bit/bottom_side = 0
-3:1/0/terrains_peering_bit/top_side = 0
-3:2/0 = 0
-3:2/0/terrain_set = 0
-3:2/0/terrain = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(84.149155, -160, 84.149155, 63.776207, 69.97667, 79.72025, -71.74823, 81.49181, -82.377594, 62.004646, -80.60602, -160)
-3:2/0/terrains_peering_bit/top_side = 0
-2:2/0 = 0
-2:2/0/terrain_set = 0
-2:2/0/terrain = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-1.5692139, -65.90701, -70.614655, 0, -160, 43.93802, -160, -160, 48.64563, -160)
-2:2/0/terrains_peering_bit/left_side = 0
-2:2/0/terrains_peering_bit/top_left_corner = 0
-2:2/0/terrains_peering_bit/top_side = 0
-1:2/0 = 0
-1:2/0/terrain_set = 0
-1:2/0/terrain = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(160, 39.230347, 65.90701, 73.75308, -53.353302, 86.30679, -160, 43.93802, -160, -160, 160, -160)
-1:2/0/terrains_peering_bit/right_side = 0
-1:2/0/terrains_peering_bit/left_side = 0
-1:2/0/terrains_peering_bit/top_left_corner = 0
-1:2/0/terrains_peering_bit/top_side = 0
-1:2/0/terrains_peering_bit/top_right_corner = 0
-0:2/0 = 0
-0:2/0/terrain_set = 0
-0:2/0/terrain = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(65.90701, -1.5692139, 0, -70.614655, -43.93802, -160, 160, -160, 160, 48.64563)
-0:2/0/terrains_peering_bit/right_side = 0
-0:2/0/terrains_peering_bit/top_side = 0
-0:2/0/terrains_peering_bit/top_right_corner = 0
-0:3/0 = 0
-0:3/0/terrain_set = 0
-0:3/0/terrain = 0
-0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(160, 84.149155, -63.776207, 84.149155, -79.72025, 69.97667, -81.49181, -71.74823, -62.004646, -82.377594, 160, -80.60602)
-0:3/0/terrains_peering_bit/right_side = 0
-1:3/0 = 0
-1:3/0/terrain_set = 0
-1:3/0/terrain = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-160, 82.5, -160, -80.5, 160, -80.5, 160, 81.5)
-1:3/0/terrains_peering_bit/right_side = 0
-1:3/0/terrains_peering_bit/left_side = 0
-2:1/0 = 0
-2:1/0/terrain_set = 0
-2:1/0/terrain = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(39.230347, -160, 73.75308, -65.90701, 86.30679, 53.353302, 43.93802, 160, -160, 160, -160, -160)
-2:1/0/terrains_peering_bit/bottom_side = 0
-2:1/0/terrains_peering_bit/bottom_left_corner = 0
-2:1/0/terrains_peering_bit/left_side = 0
-2:1/0/terrains_peering_bit/top_left_corner = 0
-2:1/0/terrains_peering_bit/top_side = 0
-1:1/0 = 0
-1:1/0/terrain_set = 0
-1:1/0/terrain = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-160, -160, 160, -160, 160, 160, -160, 160)
-1:1/0/terrains_peering_bit/right_side = 0
-1:1/0/terrains_peering_bit/bottom_right_corner = 0
-1:1/0/terrains_peering_bit/bottom_side = 0
-1:1/0/terrains_peering_bit/bottom_left_corner = 0
-1:1/0/terrains_peering_bit/left_side = 0
-1:1/0/terrains_peering_bit/top_left_corner = 0
-1:1/0/terrains_peering_bit/top_side = 0
-1:1/0/terrains_peering_bit/top_right_corner = 0
-0:1/0 = 0
-0:1/0/terrain_set = 0
-0:1/0/terrain = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-39.230347, 160, -73.75308, 65.90701, -86.30679, -53.353302, -43.93802, -160, 160, -160, 160, 160)
-0:1/0/terrains_peering_bit/right_side = 0
-0:1/0/terrains_peering_bit/bottom_right_corner = 0
-0:1/0/terrains_peering_bit/bottom_side = 0
-0:1/0/terrains_peering_bit/top_side = 0
-0:1/0/terrains_peering_bit/top_right_corner = 0
-3:3/0 = 0
-3:3/0/terrain_set = 0
-3:3/0/terrain = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.8857727, -83.263374, 62.89041, -58.461517, 84.14914, -8.857803, 66.43353, 53.146835, 13.286713, 81.491806, -54.032623, 65.54776, -85.920715, 5.314682, -64.66199, -56.689957)
-2:3/0 = 0
-2:3/0/terrain_set = 0
-2:3/0/terrain = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-160, -84.149155, 63.776207, -84.149155, 79.72025, -69.97667, 81.49181, 71.74823, 62.004646, 82.377594, -160, 80.60602)
-2:3/0/terrains_peering_bit/left_side = 0
-0:4/0 = 0
-0:4/0/terrain_set = 0
-0:4/0/terrain = 1
-
-[sub_resource type="TileSet" id="TileSet_ybixb"]
-tile_size = Vector2i(320, 320)
-physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
-terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "Water"
-terrain_set_0/terrain_0/color = Color(0, 0, 0, 1)
-terrain_set_0/terrain_1/name = "Dirt"
-terrain_set_0/terrain_1/color = Color(1, 1, 1, 1)
-terrain_set_1/mode = 0
-terrain_set_1/terrain_0/name = "dirt"
-terrain_set_1/terrain_0/color = Color(1, 1, 1, 1)
-sources/0 = SubResource("TileSetAtlasSource_3f77q")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_or4qw"]
 texture = ExtResource("4_ajqnh")
@@ -885,15 +751,11 @@ terrain_set_2/terrain_0/name = "gravel with dirt"
 terrain_set_2/terrain_0/color = Color(0.1882353, 1, 0.11764706, 1)
 sources/0 = SubResource("TileSetAtlasSource_or4qw")
 
-[node name="proc_gen_world" type="Node2D"]
+[node name="proc_gen_world" type="Node2D" unique_id=710880763]
 script = ExtResource("1_3f77q")
 noise_texture = SubResource("NoiseTexture2D_2jbus")
 
-[node name="Layer0" type="TileMapLayer" parent="."]
-use_parent_material = true
-tile_set = SubResource("TileSet_ybixb")
-
-[node name="player" parent="." instance=ExtResource("2_3f77q")]
-
-[node name="TileMap" type="TileMapLayer" parent="."]
+[node name="TileMap" type="TileMapLayer" parent="." unique_id=1690112451]
 tile_set = SubResource("TileSet_2jbus")
+
+[node name="player" parent="." unique_id=1459040017 instance=ExtResource("2_3f77q")]
