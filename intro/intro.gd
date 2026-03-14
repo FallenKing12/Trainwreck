@@ -1,6 +1,5 @@
 extends Control
 
-@onready var cam = $"../Camera2D"
 @onready var intro = $Intro
 
 var skipped = false
