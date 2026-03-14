@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b2owfil6webgc" path="res://menu/menu.gd" id="1_pbjm4"]
 [ext_resource type="Texture2D" uid="uid://v5fwgr5cwe8y" path="res://menu/background/bg2.png" id="2_pbjm4"]
 [ext_resource type="Texture2D" uid="uid://dtw3hdfbpwbeb" path="res://menu/background/bg3.png" id="3_svuvw"]
+[ext_resource type="PackedScene" uid="uid://cjnwguhiommw4" path="res://intro/intro.tscn" id="5_svuvw"]
 
 [node name="menu" type="Node2D" unique_id=1356658951]
 script = ExtResource("1_pbjm4")
@@ -23,6 +24,7 @@ position = Vector2(576, 324)
 texture = ExtResource("2_pbjm4")
 
 [node name="Trees" type="Parallax2D" parent="." unique_id=1707472212]
+scroll_offset = Vector2(7, 5)
 repeat_size = Vector2(1152, 0)
 
 [node name="bg3" type="Sprite2D" parent="Trees" unique_id=1323873100]
@@ -51,6 +53,11 @@ offset_top = 159.0
 offset_right = 563.0
 offset_bottom = 244.0
 text = "generation"
+
+[node name="intro" parent="." unique_id=975373086 instance=ExtResource("5_svuvw")]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=50778269]
+position = Vector2(576, 324)
 
 [connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Quit_button" to="." method="_on_quit_button_pressed"]
