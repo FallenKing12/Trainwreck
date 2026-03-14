@@ -1,15 +1,52 @@
 extends Node2D
 
+@onready var cam = $Camera2D
+
+@onready var start_but = $Start_button
+@onready var quit_but = $Quit_button
+@onready var test_but = $test_button
 
 func _ready() -> void:
-	pass
-
+	cam.global_position = Vector2(576.0, 0.0)
+	
+	start_but.modulate.a = 0.0
+	quit_but.modulate.a = 0.0
+	test_but.modulate.a = 0.0
+	
+	start_but.disabled = true
+	quit_but.disabled = true
+	test_but.disabled = true
 
 func _process(delta: float) -> void:
-	$Sky.scroll_offset.x -= 10 * delta
-	$Ground.scroll_offset.x -= 50 * delta
-	$Trees.scroll_offset.x -= 100 * delta
+	$Sky.scroll_offset.x -= 100 * delta
+	$Ground.scroll_offset.x -= 500 * delta
+	$Trees.scroll_offset.x -= 1000 * delta
 	pass
+
+
+func intro(skipped: bool) -> void:
+	if skipped:
+		cam.global_position = Vector2(576.0, 324.0)
+		
+		start_but.modulate.a = 1.0
+		quit_but.modulate.a = 1.0
+		test_but.modulate.a = 1.0
+		
+		start_but.disabled = false
+		quit_but.disabled = false
+		test_but.disabled = false
+	else:
+		var tween = create_tween()
+		tween.tween_property(cam, "global_position", Vector2(576.0, 324.0), 5.0)
+		
+		# когда будет поезд, сделать ещё сдвиг влево
+		
+		start_but.disabled = false
+		tween.tween_property(start_but, "modulate:a", 1, 1.0)
+		quit_but.disabled = false
+		tween.tween_property(quit_but, "modulate:a", 1, 1.0)
+		test_but.disabled = false
+		tween.tween_property(test_but, "modulate:a", 1, 1.0)
 
 
 func _on_start_button_pressed() -> void:

@@ -27,7 +27,7 @@ var gravel_terrain_set = 2
 
 var world_seed = RandomNumberGenerator.new()
 
-var developer_mode = true;
+var developer_mode = false;
 
 
 func _ready():
