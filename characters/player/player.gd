@@ -9,6 +9,7 @@ var speed = 3000.0
 
 func _ready() -> void:
 	player_animation.play("default")
+	update_deleloper_mode(false)
 
 
 func _physics_process(delta: float) -> void:
@@ -35,9 +36,15 @@ func update_deleloper_mode(dev_mode: bool):
 	var cam = get_node("Camera2D")
 	if dev_mode:
 		speed = 3000.0
-		cam.zoom.x = 0.13;
-		cam.zoom.y = 0.13;
+		cam.zoom.x = 0.13
+		cam.zoom.y = 0.13
+		# Отключить коллизию
+		collision_layer = 0
+		collision_mask = 0
 	else:
 		speed = 500.0
-		cam.zoom.x = 0.5;
-		cam.zoom.y = 0.5;
+		cam.zoom.x = 0.5
+		cam.zoom.y = 0.5
+		# Включить коллизию
+		collision_layer = 1
+		collision_mask = 1

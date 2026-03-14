@@ -22,7 +22,7 @@ var terrain_set = 0
 
 var world_seed = RandomNumberGenerator.new()
 
-var developer_mode = true;
+var developer_mode = false;
 
 
 func _ready():
