@@ -10,15 +10,20 @@ var height : int = 100
 
 #vars for tile placing
 var source_id = 1
-var land_atlas = Vector2i(0,4)
-var water_atlas = Vector2i(3,3)
 
-var water_terrain = 0
-var dirt_terrain = 1
 
-var terrain_set = 0
+# terrain layer id's for generation
+var dirt_terrain_id = 0
+var water_terrain_id = 0
+var gravel_terrain_id = 0
 
-@onready var tilemap: TileMapLayer = $Layer0
+#terrain sets 
+var dirt_terrain_set = 0
+var water_terrain_set = 1
+var gravel_terrain_set = 2
+
+#@onready var tilemap: TileMapLayer = $Layer0
+@onready var tilemap: TileMap = $TileMap
 
 var world_seed = RandomNumberGenerator.new()
 
@@ -38,25 +43,31 @@ func _process(delta: float) -> void:
 		if $player.has_method("update_deleloper_mode"):
 			$player.update_deleloper_mode(developer_mode)
 
-
 func generate_world():
 	var dirt_cells = []
 	var water_cells = []
+	var gravel_cells = []
 	
 	for x in range(width):
 		for y in range(height):
 			var noise_val = noise.get_noise_2d(x,y)
-			if noise_val > 0.0:
-				#place ground
-				dirt_cells.append(Vector2i(x,y))
-			elif noise_val < 0.0:
+			if noise_val > 0.4:
+				#place gravel
+				gravel_cells.append(Vector2i(x,y))
+			elif noise_val < -0.4:
 				#place water
 				water_cells.append(Vector2i(x,y))
-				
+			else:
+				#place dirt
+				dirt_cells.append(Vector2i(x,y))
 	# Place dirt terrain
 	if dirt_cells.size() > 0:
-		tilemap.set_cells_terrain_connect(dirt_cells, terrain_set, dirt_terrain, true)
+		tilemap.set_cells_terrain_connect(0,dirt_cells, dirt_terrain_set, dirt_terrain_id, true)
+		
+	# Place gravel terrain
+	if gravel_cells.size() > 0:
+		tilemap.set_cells_terrain_connect(0,gravel_cells, gravel_terrain_set, gravel_terrain_id, true)
 	
 	# Place water terrain
 	if water_cells.size() > 0:
-		tilemap.set_cells_terrain_connect(water_cells, terrain_set, water_terrain, true)
+		tilemap.set_cells_terrain_connect(0,water_cells, water_terrain_set, water_terrain_id, true)
