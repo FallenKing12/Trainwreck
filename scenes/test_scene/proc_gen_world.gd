@@ -7,30 +7,28 @@ var noise : Noise
 #map size
 var width : int = 100
 var height : int = 100
-
 #vars for tile placing
 var source_id = 1
-
 
 # terrain layer id's for generation
 var dirt_terrain_id = 0
 var water_terrain_id = 0
 var gravel_terrain_id = 0
-
 #terrain sets 
 var dirt_terrain_set = 0
 var water_terrain_set = 1
 var gravel_terrain_set = 2
 
-#@onready var tilemap: TileMapLayer = $Layer0
 @onready var tilemap: TileMapLayer = $TileMap
 
 var world_seed = RandomNumberGenerator.new()
 
 var developer_mode = true;
 
-
 func _ready():
+	if $player.has_method("update_deleloper_mode"):
+		$player.update_deleloper_mode(developer_mode)
+		
 	noise = noise_texture.noise
 	world_seed.randomize()  # Случайный сид (по времени)
 	noise.set_seed(world_seed.randi())
