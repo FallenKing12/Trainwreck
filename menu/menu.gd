@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 		test_but.disabled = false
 	
 	$Sky.scroll_offset.x -= 100.0 * delta
-	$Ground.scroll_offset.x -= 500.0 * delta
+	$Ground.scroll_offset.x -= 1000.0 * delta
 	$Trees.scroll_offset.x -= 1000.0 * delta
 	pass
 
